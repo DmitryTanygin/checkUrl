@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone'){
-            steps{
-                git branch: 'main',
-                url: 'https://github.com/DmitryTanygin/checkUrl.git'
-            }
-        }
         stage('Run script'){
             input {
                 message "Enter URL"
